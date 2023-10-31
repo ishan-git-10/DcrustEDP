@@ -1,0 +1,16 @@
+{
+  "name": "dcrustedp",
+  "version": "1.0.0",
+  "description": "Dcrust EDP clone",
+  "type":"module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
+  },
+  "author": "Ekta, Ishan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
