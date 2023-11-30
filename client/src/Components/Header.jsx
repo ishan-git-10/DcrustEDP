@@ -3,31 +3,31 @@ import { Navbar, Nav, Container, NavDropdown, Image, Row, Col } from 'react-boot
 import {LinkContainer} from "react-router-bootstrap";
 import { IoPerson } from "react-icons/io5";
 import {Link} from "react-router-dom";
-// import { useDispatch, useSelector } from 'react-redux';
-// import { useLogoutMutation } from '../slices/usersApiSlice';
-// import { useNavigate } from 'react-router-dom';
-// import { logout } from '../slices/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLogoutMutation } from '../slices/usersApiSlice';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../slices/authSlice';
 import "./Header.css";
 
 
 function Header() {
 
-//   const { userInfo } = useSelector((state) => state.auth);
+  const { userInfo } = useSelector((state) => state.auth);
 
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-//   const [logoutApiCall] = useLogoutMutation();
+  const [logoutApiCall] = useLogoutMutation();
 
-//   const logoutHandler = async () => {
-//     try {
-//       await logoutApiCall().unwrap();
-//       dispatch(logout());
-//       navigate('/login');
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate('/login');
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div className="bg-primary heading" data-bs-theme="dark">
@@ -80,9 +80,52 @@ function Header() {
             <LinkContainer to='/contact'>
               <Nav.Link className="text-center nav-link">Contact</Nav.Link>
             </LinkContainer>
-            <LinkContainer to='/login'>
-              <Nav.Link className="text-center nav-link"><IoPerson className='mb-1'/> Login</Nav.Link>
-            </LinkContainer>
+            
+
+            {userInfo ? (
+                <>
+                  <NavDropdown className="text-center" title={userInfo.username} id='username'>
+                    <LinkContainer to='/profile'>
+                      <NavDropdown.Item className="text-center">Profile</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/orders'>
+                      <NavDropdown.Item className="text-center">My Orders</NavDropdown.Item>
+                    </LinkContainer>
+                    <NavDropdown.Item className="text-center" onClick={logoutHandler}>
+                      Logout
+                    </NavDropdown.Item>
+
+                    {userInfo.isAdmin && <>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item className="text-center text-white" disabled>
+                          Admin Features
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <LinkContainer to='/admin/orderlist'>
+                        <NavDropdown.Item className="text-center">
+                          Order List
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to='/admin/productlist'>
+                        <NavDropdown.Item className="text-center">
+                          Product List
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to='/admin/userlist'>
+                        <NavDropdown.Item className="text-center">
+                          User List
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                    </>
+                    }
+                  </NavDropdown>
+                </>
+              ) : (
+                <LinkContainer to='/login'>
+                  <Nav.Link className="text-center nav-link"><IoPerson className='mb-1'/> Login</Nav.Link>
+                </LinkContainer>
+              )}
+
           </Nav>
           
         </Navbar.Collapse>

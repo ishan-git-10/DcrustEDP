@@ -1,21 +1,29 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
-        username: {
-            type: String,
-            required: [true, "Username is required"],
-        },
-        password: {
-            type: String,
-            required: [true, "Password is required"],
-        },
-        role: {
-            type: String,
-            default: "user",
-        },
-    }, 
-    {timestamps:true}
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+      required: [true, "Username is required"],
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: [true, "Password is required"],
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
 );
 
-module.exports = mongoose.model("User", userSchema);
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return enteredPassword == this.password;
+};
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
