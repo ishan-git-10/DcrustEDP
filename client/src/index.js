@@ -16,6 +16,7 @@ import LoginScreen from "./Screens/LoginScreen";
 import PrivateRoute from "./Components/PrivateRoute";
 import AdminRoute from "./Components/AdminRoute";
 import AboutScreen from "./Screens/AboutScreen";
+import UGProgramsScreen from "./Screens/UGProgramsScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/about" element={<AboutScreen />} />
+      <Route path="/ugprograms" element={<UGProgramsScreen />} />
       <Route path="" element={<PrivateRoute />}></Route>
       <Route path="" element={<AdminRoute />}></Route>
     </Route>
