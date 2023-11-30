@@ -1,0 +1,41 @@
+.heading{
+    color: whitesmoke;
+}
+.logo-img{
+    padding-left: 4em;
+    padding-bottom:0.7em ;
+}
+.brand-div{
+    display: inline-block;
+    margin-left: 0.4em;
+    color: whitesmoke;
+}
+.brand{
+    display: inline-block;
+    margin-top: 0.7em;
+    margin-left: 0.4em;
+}
+.tag{
+    display: inline-block;
+    margin-left: 0.4em;
+}
+.nav-links{
+    font-size: 1.1em;
+}
+.nav-link{
+    margin: 0 40px;
+}
+
+@media (max-width: 991px) {
+    .logo-img{
+        padding-left: 0;
+        padding-bottom:0.7em ;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+    }
+    .brand,.tag{
+        text-align: center;
+    }
+}
