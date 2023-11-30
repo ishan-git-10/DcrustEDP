@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row} from "react-bootstrap";
+import "./AboutScreen.css";
 
 const details = [
   {
@@ -75,7 +76,7 @@ function AboutScreen() {
       <Container className="my-4">
         {details.map((detail, index) => (
           <div className="p-2" key={index}>
-            <Row className="py-1">
+            <Row className="py-1 about-row">
               <Col lg={3} className="m-2 fw-bold">
                 <Row>{detail.branch}</Row>
                 <Row>{detail.phn}</Row>
@@ -88,6 +89,7 @@ function AboutScreen() {
                 </Row>
               </Col>
             </Row>
+            <hr className="mt-4"/>
           </div>
         ))}
       </Container>

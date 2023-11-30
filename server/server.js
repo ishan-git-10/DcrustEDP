@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
 const port = process.env.PORT || 5500;
 
-connectDB(); //Connect to MongoDB\
+connectDB(); //Connect to MongoDB
 
 app.use(cors());
 app.use(express.json());
