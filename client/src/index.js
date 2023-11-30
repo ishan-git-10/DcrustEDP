@@ -7,6 +7,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import { Provider } from "react-redux";
+import store from "./store.js";
+
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -18,7 +21,7 @@ import LoginScreen from "./Screens/LoginScreen";
 import PrivateRoute from "./Components/PrivateRoute";
 import AdminRoute from "./Components/AdminRoute";
 import AboutScreen from "./Screens/AboutScreen";
-import UGProgramsScreen from "./Screens/UGProgramsScreen";
+// import UGProgramsScreen from "./Screens/UGProgramsScreen";
 import UploadScreen from "./Screens/UploadScreen";
 
 const router = createBrowserRouter(

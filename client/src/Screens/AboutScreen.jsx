@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Col, Container, Row} from "react-bootstrap";
 
 const details = [
   {
@@ -64,8 +64,8 @@ function AboutScreen() {
   return (
     <div>
       <div>
-        <h3 className="text-center fw-bolder">Controller of Examinations</h3>
-        <h1 className="text-center fw-bolder">Dr. Mahabir Singh Dhankar</h1>
+        <h3 className="text-center fw-bolder mt-4">Controller of Examinations</h3>
+        <h2 className="text-center fw-bolder">Dr. Mahabir Singh Dhankar</h2>
         <div className="text-center fw-bolder d-flex gap-3 items-center justify-content-center">
           <div>Tele Fax.: 0130-2484006</div>
           <div>Email: coe@dcrustm.org</div>
