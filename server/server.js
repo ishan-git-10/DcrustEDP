@@ -19,7 +19,8 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-app.use("/api/users", userRoutes);
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/admin", require("./routes/admin"));
 app.listen(port, () => {
   console.log("Server active");
 });
