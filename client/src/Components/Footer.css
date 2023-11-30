@@ -1,0 +1,16 @@
+.social-link{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 0.8em;
+    padding-right: 0.8em;
+    margin-bottom: 10px;
+}
+
+.logo-img-footer{
+    padding-bottom:0.7em ;
+    padding-right:0.8em ;
+}
+
+.name-profile{
+    font-size: 1em;
+}
