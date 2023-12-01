@@ -6,13 +6,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
 import { useAddPyqMutation, useUploadPdfMutation } from "../slices/adminSlice";
+import Loading from "../Components/Loading";
 
 const UploadScreen = () => {
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
   const [program, setProgram] = useState("");
   const [sem, setSem] = useState("");
-  const [pdf, setPDF] = useState("");
+  const [path, setPath] = useState("");
 
   const navigate = useNavigate();
 
@@ -30,7 +31,7 @@ const UploadScreen = () => {
         code,
         sem,
         program,
-        pdf,
+        path,
       }).unwrap();
       toast.success("Previous Year added successfully");
       navigate("/");
@@ -41,11 +42,14 @@ const UploadScreen = () => {
 
   const uploadFileHandler = async (e) => {
     const formData = new FormData();
-    formData.append("file", e.target.files[0]);
+    console.log(e.target.files[0]);
+    formData.append("pdf", e.target.files[0]);
     try {
       const res = await uploadPaper(formData).unwrap();
       toast.success(res.message);
-      setPDF(res.file);
+      console.log(res.file);
+      setPath(res.file);
+      console.log(path)
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
@@ -70,6 +74,7 @@ const UploadScreen = () => {
                 aria-label="Username"
                 aria-describedby="basic-addon1"
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </InputGroup>
           </Form.Group>
@@ -85,6 +90,7 @@ const UploadScreen = () => {
                 placeholder="Enter Subject Code"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
+                required
               />
             </InputGroup>
           </Form.Group>
@@ -101,6 +107,7 @@ const UploadScreen = () => {
                 onChange={(e) => setSem(e.target.value)}
                 min={1}
                 max={8}
+                required
               />
             </InputGroup>
           </Form.Group>
@@ -110,6 +117,7 @@ const UploadScreen = () => {
             aria-label="Default select example"
             className="mb-4"
             onChange={(e) => setProgram(e.target.value)}
+            required
           >
             <option>Select</option>
             <option value="UG">UG</option>
@@ -119,8 +127,9 @@ const UploadScreen = () => {
           <Form.Group className="my-2" controlId="password">
             <Form.Label>Upload PDF</Form.Label>
             <InputGroup className="mb-3">
-              <Form.Control type="file" onChange={uploadFileHandler} />
+            <Form.Control type="file" onChange={uploadFileHandler} required/>
             </InputGroup>
+            {loadingUpload && <Loading />}
           </Form.Group>
 
           <div className="d-grid gap-2">

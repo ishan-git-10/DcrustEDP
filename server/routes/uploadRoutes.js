@@ -15,23 +15,13 @@ const storage = multer.diskStorage({
   },
 });
 
-function checkFileType(file, cb) {
-  const filetypes = /pdf/;
-  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = filetypes.test(file.mimetype);
-
-  if (extname && mimetype) {
-    return cb(null, true);
-  } else {
-    cb({ message: "Pdfs only!" });
-  }
-}
 
 const upload = multer({
-  storage,
+  storage: storage,
 });
 
 router.post("/", upload.single("pdf"), (req, res) => {
+  console.log(req.file)
   res.send({
     message: "File uploaded successfully",
     file: `/${req.file.path}`,

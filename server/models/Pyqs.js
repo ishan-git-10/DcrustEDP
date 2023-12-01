@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const pyqsSchema = new Schema({
         subjectName: {
             type: String,
-            required: [true, "Username is required"],
+            required: [true, "Subject name is required"],
         },
         code: {
             type: String,
-            required: [true, "Password is required"],
+            required: [true, "Subject Code is required"],
         },
         sem: {
             type: Number,
@@ -16,11 +16,11 @@ const pyqsSchema = new Schema({
         },
         program: {
             type: String,
-            required: [true, "Password is required"],
+            required: [true, "Program is required"],
         },
         fileLink: {
             type: String,
-            required: true,
+            required: [true, "File link is required"],
         },
 
     }, 
