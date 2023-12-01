@@ -15,6 +15,7 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import HomeScreen from "./Screens/HomeScreen";
 import LoginScreen from "./Screens/LoginScreen";
+import UGProgramsScreen from "./Screens/UGProgramsScreen";
 import PrivateRoute from "./Components/PrivateRoute";
 import AdminRoute from "./Components/AdminRoute";
 import AboutScreen from "./Screens/AboutScreen";
@@ -22,6 +23,7 @@ import InstitutionsScreen from "./Screens/InstitutionsScreen";
 import ContactScreen from "./Screens/ContactScreen";
 import UGProgramsScreen from "./Screens/UGProgramsScreen";
 import UploadScreen from "./Screens/UploadScreen";
+import RegisterScreen from "./Screens/RegisterScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,8 +38,9 @@ const router = createBrowserRouter(
       <Route path="" element={<AdminRoute />}></Route> */}
       <Route path="/ugprograms" element={<UGProgramsScreen />} />
       <Route path="/upload/pyqs" element={<UploadScreen />} />
-      {/* <Route path="" element={<PrivateRoute />}></Route>
-      <Route path="" element={<AdminRoute />}></Route> */}
+      <Route path="/register" element={<RegisterScreen />} />
+      {/* {/* <Route path="" element={<PrivateRoute />}></Route> */}
+      {/* <Route path="" element={<AdminRoute />}></Route> */} */}
     </Route>
   )
 );

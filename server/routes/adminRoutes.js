@@ -2,10 +2,14 @@ import express from "express";
 const router = express.Router();
 import {
     uploadPyqs
-} from "../controllers/productController.js";
+} from "../controllers/pyqsController.js";
+import {
+    registerUser
+} from "../controllers/userController.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
 
 router.route("/pyqs").post(uploadPyqs);
+router.route("/register").post(registerUser);
 // router.route("/").post(protect, admin, uploadPyqs);
 
 // router
