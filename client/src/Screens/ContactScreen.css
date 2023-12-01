@@ -1,0 +1,12 @@
+.contact-row{
+    padding: 5px 17vw;
+}
+
+.contact-row p{
+    margin-bottom: 0;
+}
+
+.contact-mail{
+    text-decoration: none;
+    color: whitesmoke;
+}

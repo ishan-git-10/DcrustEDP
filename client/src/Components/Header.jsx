@@ -88,14 +88,14 @@ function Header() {
                     <LinkContainer to='/profile'>
                       <NavDropdown.Item className="text-center">Profile</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to='/orders'>
+                    {/* <LinkContainer to='/orders'>
                       <NavDropdown.Item className="text-center">My Orders</NavDropdown.Item>
-                    </LinkContainer>
+                    </LinkContainer> */}
                     <NavDropdown.Item className="text-center" onClick={logoutHandler}>
                       Logout
                     </NavDropdown.Item>
 
-                    {userInfo.isAdmin && <>
+                    {/* {userInfo.isAdmin && <>
                       <NavDropdown.Divider />
                       <NavDropdown.Item className="text-center text-white" disabled>
                           Admin Features
@@ -117,7 +117,7 @@ function Header() {
                         </NavDropdown.Item>
                       </LinkContainer>
                     </>
-                    }
+                    } */}
                   </NavDropdown>
                 </>
               ) : (
