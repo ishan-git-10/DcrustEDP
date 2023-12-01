@@ -75,7 +75,7 @@ function AboutScreen() {
 
       <Container className="my-4">
         {details.map((detail, index) => (
-          <div className="p-2" key={index}>
+          <div key={index} className="p-2" >
             <Row className="py-1 about-row">
               <Col lg={3} className="m-2 fw-bold">
                 <Row>{detail.branch}</Row>
@@ -83,8 +83,8 @@ function AboutScreen() {
               </Col>
               <Col lg className="px-4 bg-primary text-white rounded">
                 <Row className="d-flex flex-column gap-2">
-                  {detail.members.map((member) => (
-                    <div className="py-2">{member}</div>
+                  {detail.members.map((member,index) => (
+                    <div key={index} className="py-2">{member}</div>
                   ))}
                 </Row>
               </Col>

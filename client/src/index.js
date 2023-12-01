@@ -18,8 +18,9 @@ import LoginScreen from "./Screens/LoginScreen";
 import PrivateRoute from "./Components/PrivateRoute";
 import AdminRoute from "./Components/AdminRoute";
 import AboutScreen from "./Screens/AboutScreen";
+import InstitutionsScreen from "./Screens/InstitutionsScreen";
 import ContactScreen from "./Screens/ContactScreen";
-// import UGProgramsScreen from "./Screens/UGProgramsScreen";
+import UGProgramsScreen from "./Screens/UGProgramsScreen";
 import UploadScreen from "./Screens/UploadScreen";
 
 const router = createBrowserRouter(
@@ -28,14 +29,15 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/about" element={<AboutScreen />} />
+      <Route path="/institutions" element={<InstitutionsScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
       {/* <Route path="/ugprograms" element={<UGProgramsScreen />} /> */}
       {/* <Route path="" element={<PrivateRoute />}></Route>
       <Route path="" element={<AdminRoute />}></Route> */}
       <Route path="/ugprograms" element={<UGProgramsScreen />} />
       <Route path="/upload/pyqs" element={<UploadScreen />} />
-      <Route path="" element={<PrivateRoute />}></Route>
-      <Route path="" element={<AdminRoute />}></Route>
+      {/* <Route path="" element={<PrivateRoute />}></Route>
+      <Route path="" element={<AdminRoute />}></Route> */}
     </Route>
   )
 );

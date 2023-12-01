@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 import dotenv from "dotenv";
 dotenv.config();
-import connectDB from "./config/db.js";
+import connectDB from "./configs/db.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
@@ -19,8 +19,7 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-app.use("/api/auth", require("./routes/auth"));
-app.use("/api/admin", require("./routes/admin"));
+app.use("/api/users", userRoutes);
 app.listen(port, () => {
   console.log("Server active");
 });
