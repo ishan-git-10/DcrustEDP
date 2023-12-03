@@ -25,6 +25,10 @@
 .nav-link{
     margin: 0 40px;
 }
+.deco{
+    text-decoration: none;
+    color: whitesmoke;
+}
 
 @media (max-width: 991px) {
     .logo-img{

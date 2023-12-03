@@ -55,26 +55,26 @@ function Header() {
               <Nav.Link className="text-center nav-link">Institutions</Nav.Link>
             </LinkContainer>
             <NavDropdown className="text-center" title="Programmes" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3" >
-                PHD Programmes
+              <NavDropdown.Item>
+              <Link to="/ugprograms" className='deco'>PHD Programmes</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                PG Programmes
+              <NavDropdown.Item>
+              <Link to="/ugprograms" className='deco'>PG Programmes</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Dual Degree Programmes
+              <NavDropdown.Item>
+              <Link to="/ugprograms" className='deco'>Dual Degree Programmes</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                UG Programmes
+              <NavDropdown.Item>
+                <Link to="/ugprograms" className='deco'>UG Programmes</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                PG Diploma Programmes
+              <NavDropdown.Item>
+              <Link to="/ugprograms" className='deco'>PG Diploma Programmes</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Certificate Programmes
+              <NavDropdown.Item>
+              <Link to="/ugprograms" className='deco'>Certificate Programmes</Link>
               </NavDropdown.Item>
             </NavDropdown>
-            <LinkContainer to='/rules'>
+            <LinkContainer to='/institutions'>
               <Nav.Link className="text-center nav-link">Rulebook</Nav.Link>
             </LinkContainer>
             <LinkContainer to='/contact'>
@@ -85,9 +85,9 @@ function Header() {
             {userInfo ? (
                 <>
                   <NavDropdown className="text-center" title={userInfo.username} id='username'>
-                    <LinkContainer to='/profile'>
+                    {/* <LinkContainer to='/profile'>
                       <NavDropdown.Item className="text-center">Profile</NavDropdown.Item>
-                    </LinkContainer>
+                    </LinkContainer> */}
                     {/* <LinkContainer to='/orders'>
                       <NavDropdown.Item className="text-center">My Orders</NavDropdown.Item>
                     </LinkContainer> */}
@@ -95,29 +95,29 @@ function Header() {
                       Logout
                     </NavDropdown.Item>
 
-                    {/* {userInfo.isAdmin && <>
+                    {userInfo.isAdmin && <>
                       <NavDropdown.Divider />
                       <NavDropdown.Item className="text-center text-white" disabled>
                           Admin Features
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <LinkContainer to='/admin/orderlist'>
+                      <LinkContainer to='/upload/pyqs'>
                         <NavDropdown.Item className="text-center">
-                          Order List
+                          Upload Previous Year Questions
                         </NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to='/admin/productlist'>
+                      <LinkContainer to='/register'>
                         <NavDropdown.Item className="text-center">
-                          Product List
+                          Register User
                         </NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to='/admin/userlist'>
+                      {/* <LinkContainer to='/admin/userlist'>
                         <NavDropdown.Item className="text-center">
                           User List
                         </NavDropdown.Item>
-                      </LinkContainer>
+                      </LinkContainer> */}
                     </>
-                    } */}
+                    }
                   </NavDropdown>
                 </>
               ) : (

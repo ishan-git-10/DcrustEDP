@@ -3,7 +3,6 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./configs/db.js";
-import connectDB from "./configs/db.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";

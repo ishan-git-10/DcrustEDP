@@ -55,13 +55,13 @@ function HomeScreen() {
                             <ListGroup.Item variant="secondary" action href="#link1">
                             Previous question papers
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link2">
+                            <ListGroup.Item variant="secondary" action href="#link3">
                             Official Transcript
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link2">
+                            <ListGroup.Item variant="secondary" action href="#link4">
                             Duplicate Certificates
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link2">
+                            <ListGroup.Item variant="secondary" action href="#link5">
                             Provisional Degree
                             </ListGroup.Item>
                             <ListGroup.Item variant="secondary" action href="#link2">

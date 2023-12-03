@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
-import './UGProgramsScreen.css'
+import "./InstitutionsScreen.css";
 
 const ugprograms = [
   {
@@ -123,7 +123,8 @@ const ugprograms = [
 
 function UGProgramsScreen() {
   return (
-    <div className="border-2 border-start rounded-md object-fit-cover">
+    <div className="mt-4 table-width">
+      <h3 className="text-center mb-4">Programs Offered</h3>
       <Table bordered className="table-border">
         <thead>
           <tr className="py-1">
@@ -144,28 +145,6 @@ function UGProgramsScreen() {
         ))}
         </tbody>
       </Table>
-      {/* <Table className="my-4">
-        <Row className="py-1 fw-bold">
-          <Col lg={3} className="m-2 p-2 fw-bold text-center">
-            Program Code
-          </Col>
-          <Col lg className="p-4">
-            Program Name
-          </Col>
-        </Row>
-        {ugprograms.map((program, index) => (
-          <div className="p-2" key={index}>
-            <Row className="py-1">
-              <Col lg={3} className="m-2 p-2 fw-bold text-center">
-                {program.code}
-              </Col>
-              <Col lg className="p-4 bg-primary text-white rounded">
-                {program.name}
-              </Col>
-            </Row>
-          </div>
-        ))}
-      </Table> */}
     </div>
   );
 }

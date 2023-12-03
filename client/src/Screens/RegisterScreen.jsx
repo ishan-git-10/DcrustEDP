@@ -24,11 +24,11 @@ const RegisterScreen = () => {
     const sp = new URLSearchParams(search);
     const redirect = sp.get("redirect") || "/";
 
-    useEffect(() => {
-      if (userInfo) {
-        navigate(redirect);
-      }
-    }, [navigate, redirect, userInfo]);
+    // useEffect(() => {
+    //   if (userInfo) {
+    //     navigate(redirect);
+    //   }
+    // }, [navigate, redirect, userInfo]);
 
     const submitHandler = async (e) => {
       e.preventDefault();
