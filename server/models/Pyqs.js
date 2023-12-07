@@ -18,6 +18,10 @@ const pyqsSchema = new Schema({
             type: String,
             required: [true, "Program is required"],
         },
+        branch: {
+            type: String,
+            required: [true, "Branch is required"],
+        },
         fileLink: {
             type: String,
             required: [true, "File link is required"],

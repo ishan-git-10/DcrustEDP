@@ -4,11 +4,11 @@ import Pyqs from "../models/Pyqs.js"
 // @route   POST /api/admin/pyqs
 // @access  Private/Admin
 const uploadPyqs = asyncHandler(async (req, res) => {
-  const { name, code, sem, program, path } =
+  const { name, code, sem, program, branch, path } =
     req.body;
 
   console.log(path);
-  if(!name || !code || !sem || !program || !path){
+  if(!name || !code || !sem || !program || !branch || !path){
     res.status(400).json({ error: 'Validation failed' });
   }
 
@@ -17,6 +17,7 @@ const uploadPyqs = asyncHandler(async (req, res) => {
     code: code,
     sem: sem,
     program: program,
+    branch: branch,
     fileLink: path
   });
 

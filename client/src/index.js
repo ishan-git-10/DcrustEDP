@@ -21,8 +21,13 @@ import AdminRoute from "./Components/AdminRoute";
 import AboutScreen from "./Screens/AboutScreen";
 import InstitutionsScreen from "./Screens/InstitutionsScreen";
 import ContactScreen from "./Screens/ContactScreen";
-import UploadScreen from "./Screens/UploadScreen";
+import UploadPYQScreen from "./Screens/UploadPYQScreen.jsx";
+import UploadResultScreen from "./Screens/UploadResultScreen.jsx";
 import RegisterScreen from "./Screens/RegisterScreen.jsx";
+import DisplayPYQScreen from "./Screens/DisplayPYQScreen.jsx";
+import UGPYQScreen from "./Screens/UGPYQScreen.jsx";
+import BranchScreen from "./Screens/BranchScreen.jsx";
+import RulebookScreen from "./Screens/RulebookScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,9 +37,14 @@ const router = createBrowserRouter(
       <Route path="/about" element={<AboutScreen />} />
       <Route path="/institutions" element={<InstitutionsScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
+      <Route path="/rulebook" element={<RulebookScreen />} />
       <Route path="/ugprograms" element={<UGProgramsScreen />} />
-      <Route path="/upload/pyqs" element={<UploadScreen />} />
-      <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/pyqs" element={<DisplayPYQScreen />} />
+      <Route path="/pyqs/ug" element={<UGPYQScreen />} />
+      <Route path="/pyqs/ug/cse" element={<BranchScreen />} />
+      <Route path="/admin/upload/pyqs" element={<UploadPYQScreen />} />
+      <Route path="/admin/upload/result" element={<UploadResultScreen />} />
+      <Route path="/admin/register" element={<RegisterScreen />} />
       {/* {/* <Route path="" element={<PrivateRoute />}></Route> */}
       {/* <Route path="" element={<AdminRoute />}></Route> */}
     </Route>

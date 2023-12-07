@@ -101,12 +101,17 @@ function Header() {
                           Admin Features
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <LinkContainer to='/upload/pyqs'>
+                      <LinkContainer to='/admin/upload/result'>
+                        <NavDropdown.Item className="text-center">
+                          Upload Student Result
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to='/admin/upload/pyqs'>
                         <NavDropdown.Item className="text-center">
                           Upload Previous Year Questions
                         </NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to='/register'>
+                      <LinkContainer to='/admin/register'>
                         <NavDropdown.Item className="text-center">
                           Register User
                         </NavDropdown.Item>
