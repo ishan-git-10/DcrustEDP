@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaBook, FaBookOpenReader, FaC } from "react-icons/fa6";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Form, Button, Row, Col, InputGroup } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
 import { useAddPyqMutation, useUploadPdfMutation } from "../slices/adminSlice";
 import Loading from "../Components/Loading";
 
-const UploadScreen = () => {
+const UploadPYQScreen = () => {
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
   const [program, setProgram] = useState("");
   const [sem, setSem] = useState("");
+  const [branch, setBranch] = useState("");
   const [path, setPath] = useState("");
 
   const navigate = useNavigate();
@@ -31,6 +30,7 @@ const UploadScreen = () => {
         code,
         sem,
         program,
+        branch,
         path,
       }).unwrap();
       toast.success("Previous Year added successfully");
@@ -95,6 +95,20 @@ const UploadScreen = () => {
             </InputGroup>
           </Form.Group>
 
+          <Form.Label>Select Branch</Form.Label>
+          <Form.Select
+            aria-label="Default select example"
+            className="mb-3"
+            onChange={(e) => setBranch(e.target.value)}
+            required
+          >
+            <option>Select</option>
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="electrical">Electrical</option>
+            <option value="civil">Civil</option>
+          </Form.Select>
+
           <Form.Group className="my-2" controlId="password">
             <Form.Label>Semester</Form.Label>
             <InputGroup className="mb-3">
@@ -150,4 +164,4 @@ const UploadScreen = () => {
   );
 };
 
-export default UploadScreen;
+export default UploadPYQScreen;

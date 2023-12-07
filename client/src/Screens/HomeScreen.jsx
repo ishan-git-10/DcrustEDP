@@ -1,5 +1,9 @@
 import React from "react";
 import {Carousel, Image, Row, Col, ListGroup } from 'react-bootstrap';
+import Transcript from "../downloads/Transcript.pdf"
+import ProvisionalDegree from "../downloads/ProvisionalDegree.pdf"
+import CorrectionCertificates from "../downloads/CorrectionCertificates.pdf"
+import Duplicate from "../downloads/Duplicate.pdf"
 import "./HomeScreen.css";
 
 function HomeScreen() {
@@ -52,19 +56,19 @@ function HomeScreen() {
                             Downloads
                         </h3>
                         <ListGroup className="mb-4">
-                            <ListGroup.Item variant="secondary" action href="#link1">
+                            <ListGroup.Item variant="secondary" action href="/pyqs">
                             Previous question papers
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link3">
+                            <ListGroup.Item variant="secondary" action href={Transcript} download="Official Transcript">
                             Official Transcript
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link4">
+                            <ListGroup.Item variant="secondary" action href={Duplicate} download="Duplicate Certificate">
                             Duplicate Certificates
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link5">
+                            <ListGroup.Item variant="secondary" action href={ProvisionalDegree} download="Provisional Degree">
                             Provisional Degree
                             </ListGroup.Item>
-                            <ListGroup.Item variant="secondary" action href="#link2">
+                            <ListGroup.Item variant="secondary" action href={CorrectionCertificates} download="Correction Certificate">
                             Correction in Certificates
                             </ListGroup.Item>
                         </ListGroup>
@@ -93,10 +97,10 @@ function HomeScreen() {
                         <ListGroup.Item variant="success" action href="#link1">
                         Student's Grievances Cell (Exams)
                         </ListGroup.Item>
-                        <ListGroup.Item variant="success" action href="#link2">
+                        <ListGroup.Item variant="success" action href="https://dcrustedp.in/pdf/notification%202%20date%20extended%20upto%2030.11.2023%20reappear%20exam%20dec%202023.pdf" target="_blank">
                         NOTIFICATION 2 - In continuation of this office Notification Endst. No. DCRUST/Conduct/5231-5280 dated 16.10.2023, it is notified that the last date of submission of online re-appear examinations form is hereby extended upto 30.11.2023 with late fee of Rs. 500/-. (DCRUST/Conduct/5766-5815 dated 28.11.2023)
                         </ListGroup.Item>
-                        <ListGroup.Item variant="success" action href="#link3">
+                        <ListGroup.Item variant="success" action href="https://dcrustedp.in/pdf/notification%203%20date%20extended%20upto%2005.12.2023%20reappear%20exam%20dec%202023.pdf">
                         Notification regarding Main & Re-appear examinations of UG and PG Programs (Educational) to be held in December 2023/ February 2024 (DCRUST/Conduct/5702-5751 dated 20.11.2023)
                         </ListGroup.Item>
                         <ListGroup.Item variant="success" action href="#link4">
