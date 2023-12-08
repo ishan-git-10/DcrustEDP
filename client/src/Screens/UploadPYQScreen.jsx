@@ -106,7 +106,11 @@ const UploadPYQScreen = () => {
             <option value="cse">CSE</option>
             <option value="ece">ECE</option>
             <option value="electrical">Electrical</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="biomedical">Biomedical</option>
+            <option value="biotech">Biotech</option>
             <option value="civil">Civil</option>
+            <option value="chemical">Chemical</option>
           </Form.Select>
 
           <Form.Group className="my-2" controlId="password">
@@ -134,8 +138,8 @@ const UploadPYQScreen = () => {
             required
           >
             <option>Select</option>
-            <option value="UG">UG</option>
-            <option value="PG">PG</option>
+            <option value="ug">UG</option>
+            <option value="pg">PG</option>
           </Form.Select>
 
           <Form.Group className="my-2" controlId="password">

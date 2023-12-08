@@ -3,43 +3,52 @@ import { FaDownload } from "react-icons/fa6";
 import { useDisplayPyqsSemWiseQuery } from "../slices/pyqsSlice";
 import { BASE_URL, FILES_URL } from "../constants";
 import "./BranchScreen.css";
+import { useParams } from "react-router-dom";
 
 const BranchScreen = () => {
 
+  const {program, branch} = useParams();
+
   const { data: sem1, isLoading: loadingsem1 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "1",
+    program: program
   });
   const { data: sem2, isLoading: loadingsem2 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "2",
+    program: program
   });
   const { data: sem3, isLoading: loadingsem3 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "3",
+    program: program
   });
   const { data: sem4, isLoading: loadingsem4 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "4",
+    program: program
   });
   const { data: sem5, isLoading: loadingsem5 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "5",
+    program: program
   });
   const { data: sem6, isLoading: loadingsem6 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "6",
+    program: program
   });
   const { data: sem7, isLoading: loadingsem7 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "7",
+    program: program
   });
   const { data: sem8, isLoading: loadingsem8 } = useDisplayPyqsSemWiseQuery({
-    branch: "cse",
+    branch: branch,
     sem: "8",
+    program: program
   });
-
-  //   console.log(sem1);
 
   const fileUrl = BASE_URL + FILES_URL + "/download/";
   return (

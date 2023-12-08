@@ -4,8 +4,8 @@ import { apiSlice } from "./apiSlice";
 export const pyqsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     displayPyqsSemWise: builder.query({
-      query: ({branch, sem}) => ({
-        url: FILES_URL+"/sem-wise/" + branch + "/" + sem,
+      query: ({branch, sem, program}) => ({
+        url: FILES_URL+"/sem-wise/" + program + "/" + branch + "/" + sem,
       }),
     }),
     downloadPYQ: builder.query({

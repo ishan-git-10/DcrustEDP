@@ -41,12 +41,13 @@ const router = createBrowserRouter(
       <Route path="/ugprograms" element={<UGProgramsScreen />} />
       <Route path="/pyqs" element={<DisplayPYQScreen />} />
       <Route path="/pyqs/:program" element={<UGPYQScreen />} />
-      <Route path="/pyqs/ug/:branch" element={<BranchScreen />} />
-      <Route path="/admin/upload/pyqs" element={<UploadPYQScreen />} />
-      <Route path="/admin/upload/result" element={<UploadResultScreen />} />
-      <Route path="/admin/register" element={<RegisterScreen />} />
+      <Route path="/pyqs/:program/:branch" element={<BranchScreen />} />
       {/* {/* <Route path="" element={<PrivateRoute />}></Route> */}
-      {/* <Route path="" element={<AdminRoute />}></Route> */}
+      <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/upload/pyqs" element={<UploadPYQScreen />} />
+        <Route path="/admin/upload/result" element={<UploadResultScreen />} />
+        <Route path="/admin/register" element={<RegisterScreen />} />
+      </Route>
     </Route>
   )
 );
