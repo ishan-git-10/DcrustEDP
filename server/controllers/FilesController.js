@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 const __dirname = path.resolve();
-const UPLOADS_DIR = path.join(__dirname, "/uploads/");
+// const UPLOADS_DIR = path.join(__dirname, "/uploads/");
 
 // @route    GET /api/files/sem-wise/:program/:branch/:sem
 const semFile = asyncHandler(async (req, res) => {
@@ -39,7 +39,7 @@ const downloadFile = asyncHandler(async (req, res) => {
       return res.status(404).json({ message: "PDF not found." });
     }
 
-    const filePath = path.join(UPLOADS_DIR, path.basename(pdf.fileLink));
+    const filePath = path.join(__dirname, path.basename(pdf.fileLink));
     console.log(filePath);
 
     // Serve the file as an attachment
