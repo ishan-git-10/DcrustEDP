@@ -8,16 +8,18 @@ const __dirname = path.dirname(__filename);
 
 const UPLOADS_DIR = path.join(__dirname, "../../uploads/");
 
-// @route   POST /api/files/sem-wise/:branch/:sem
+// @route    GET /api/files/sem-wise/:program/:branch/:sem
 const semFile = asyncHandler(async (req, res) => {
   const sem = req.params.sem;
   const branch = req.params.branch;
+  const program = req.params.program;
 
   console.log(sem);
   console.log(branch);
+  console.log(program);
 
   try {
-    const pdfs = await Pyqs.find({ sem: sem, branch: branch});
+    const pdfs = await Pyqs.find({ sem: sem, branch: branch, program: program});
     console.log(pdfs);
     res.json(pdfs);
   } catch (error) {
@@ -25,7 +27,7 @@ const semFile = asyncHandler(async (req, res) => {
   }
 });
 
-// @route   POST /api/files/download/:file
+// @route   GET /api/files/download/:file
 const downloadFile = asyncHandler(async (req, res) => {
   const pdfId = req.params.file;
 

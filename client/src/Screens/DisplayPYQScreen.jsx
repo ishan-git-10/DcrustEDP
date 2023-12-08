@@ -55,7 +55,7 @@ const DisplayPYQScreen = () => {
       </Row>
       <Row className="mt-5 d-flex justify-content-center gap-4 px-4">
         <Col lg={4}>
-          <Link to="/pyqs/ug">
+          <Link to="/pyqs/ug" className="text-decoration-none">
             <Card bg="primary" text="white" className="cursor-pointer">
               <Card.Body>
                 <Card.Title className="m-4 p-2 d-flex justify-content-center">
@@ -66,7 +66,7 @@ const DisplayPYQScreen = () => {
           </Link>
         </Col>
         <Col lg={4}>
-          <Link to="/pyqs/pg">
+          <Link to="/pyqs/pg" className="text-decoration-none">
             <Card bg="primary" text="white" className="cursor-pointer">
               <Card.Body>
                 <Card.Title className="m-4 p-2 d-flex justify-content-center">
