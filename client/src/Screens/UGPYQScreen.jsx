@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "./UGPYQScreen.css";
+import { Link } from "react-router-dom";
 
 const UGPYQScreen = () => {
   //   const navigate = useNavigate();
@@ -54,76 +55,92 @@ const UGPYQScreen = () => {
       </Row>
       <Row className="mt-5 d-flex justify-content-center gap-4 px-4">
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                CSE
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/cse">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  CSE
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                ECE
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/ece">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  ECE
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Electrical
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/electrical">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Electrical
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Mechanical
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/mechanical">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Mechanical
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Biomedical
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/biomedical">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Biomedical
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Bio Technology
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/biotech">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Bio Technology
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Civil
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/civil">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Civil
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
         <Col lg={4}>
-          <Card bg="primary" text="white" className="cursor-pointer">
-            <Card.Body>
-              <Card.Title className="m-4 p-2 d-flex justify-content-center">
-                Chemical
-              </Card.Title>
-            </Card.Body>
-          </Card>
+          <Link to="/pyqs/ug/chemical">
+            <Card bg="primary" text="white" className="cursor-pointer">
+              <Card.Body>
+                <Card.Title className="m-4 p-2 d-flex justify-content-center">
+                  Chemical
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
         </Col>
       </Row>
     </>

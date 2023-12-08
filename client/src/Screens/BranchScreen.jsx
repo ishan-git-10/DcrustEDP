@@ -1,12 +1,10 @@
-import { useState } from "react";
-import { Accordion, Card, Col, ListGroup, Row } from "react-bootstrap";
+import { Accordion, Col, ListGroup, Row } from "react-bootstrap";
 import { FaDownload } from "react-icons/fa6";
 import { useDisplayPyqsSemWiseQuery } from "../slices/pyqsSlice";
 import { BASE_URL, FILES_URL } from "../constants";
 import "./BranchScreen.css";
 
 const BranchScreen = () => {
-  //   const navigate = useNavigate();
 
   const { data: sem1, isLoading: loadingsem1 } = useDisplayPyqsSemWiseQuery({
     branch: "cse",
@@ -60,11 +58,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem1 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem1.map((pyq) => (
+              ) : ( sem1?.length>0 &&
+                sem1?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -83,11 +80,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem2 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem2.map((pyq) => (
+              ) : ( sem2?.length>0 &&
+                sem2?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -106,11 +102,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem3 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem3.map((pyq) => (
+              ) : ( sem3?.length>0 &&
+                sem3?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -129,11 +124,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem4 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem4.map((pyq) => (
+              ) : ( sem4?.length>0 &&
+                sem4?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -152,11 +146,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem5 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem5.map((pyq) => (
+              ) : ( sem5?.length>0 &&
+                sem5?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -175,11 +168,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem6 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem6.map((pyq) => (
+              ) : ( sem6?.length>0 &&
+                sem6?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -198,11 +190,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem7 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem7.map((pyq) => (
+              ) : ( sem7?.length>0 &&
+                sem7?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"
@@ -221,11 +212,10 @@ const BranchScreen = () => {
             <ListGroup>
               {loadingsem8 ? (
                 <h1>Loading...</h1>
-              ) : (
-                sem8.map((pyq) => (
+              ) : ( sem8?.length>0 &&
+                sem8?.map((pyq) => (
                   <ListGroup.Item className="d-flex justify-content-between">
-                    {" "}
-                    {pyq.code} {pyq.subjectName}{" "}
+                    {pyq.code} {pyq.subjectName}
                     <a
                       href={fileUrl + pyq._id}
                       className="text-decoration-none"

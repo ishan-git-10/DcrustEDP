@@ -74,7 +74,7 @@ function Header() {
               <Link to="/ugprograms" className='deco'>Certificate Programmes</Link>
               </NavDropdown.Item>
             </NavDropdown>
-            <LinkContainer to='/institutions'>
+            <LinkContainer to='/rulebook'>
               <Nav.Link className="text-center nav-link">Rulebook</Nav.Link>
             </LinkContainer>
             <LinkContainer to='/contact'>
