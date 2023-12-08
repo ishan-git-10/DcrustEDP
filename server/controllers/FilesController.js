@@ -39,7 +39,7 @@ const downloadFile = asyncHandler(async (req, res) => {
       return res.status(404).json({ message: "PDF not found." });
     }
 
-    const filePath = path.join(__dirname, path.basename(pdf.fileLink));
+    const filePath = path.join(__dirname, pdf.fileLink);
     console.log(filePath);
 
     // Serve the file as an attachment
