@@ -3,10 +3,10 @@ import path from "path";
 import Pyqs from "../models/Pyqs.js";
 import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const UPLOADS_DIR = path.join(__dirname, "../../uploads/");
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+const __dirname = path.resolve();
+const UPLOADS_DIR = path.join(__dirname, "/uploads/");
 
 // @route    GET /api/files/sem-wise/:program/:branch/:sem
 const semFile = asyncHandler(async (req, res) => {
